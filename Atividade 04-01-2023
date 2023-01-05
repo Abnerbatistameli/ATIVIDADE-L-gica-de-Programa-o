@@ -1,0 +1,102 @@
+programa {
+  funcao inicio() {
+
+    // 01 - Escreva um algoritmo, que leia um número inteiro via teclado entre 1 e 10 e 
+    //mostre na tela a tabuada deste número. Utilize o Laço de Repetição enquanto para resolver o exercício. Veja os exemplos abaixo:
+
+    caracter continua = 's'
+		inteiro numero, resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7, resultado8, resultado9, resultado10
+
+		enquanto(continua !=  'n')
+		{
+			escreva("\nDigite um número (1 – 10): ")
+			leia(numero)
+      enquanto(numero>10){
+        escreva("Digite um número inteiro entre 1 e 10")
+        retorne
+      }
+			
+      resultado1 = numero*1
+      resultado2 = numero*2
+      resultado3 = numero*3
+      resultado4 = numero*4
+      resultado5 = numero*5
+      resultado6 = numero*6
+      resultado7 = numero*7
+      resultado8 = numero*8
+      resultado9 = numero*9
+      resultado10 = numero*10
+	
+			escreva("\n", numero, " X 1 = ", resultado1, "\n")
+      escreva("\n", numero, " X 2 = ", resultado2, "\n")
+      escreva("\n", numero, " X 3 = ", resultado3, "\n")
+      escreva("\n", numero, " X 4 = ", resultado4, "\n")
+      escreva("\n", numero, " X 5 = ", resultado5, "\n")
+      escreva("\n", numero, " X 6 = ", resultado6, "\n")
+      escreva("\n", numero, " X 7 = ", resultado7, "\n")
+      escreva("\n", numero, " X 8 = ", resultado8, "\n")
+      escreva("\n", numero, " X 9 = ", resultado9, "\n")
+      escreva("\n", numero, " X 10 = ", resultado10, "\n")
+	
+			escreva("\n++++++++++++++++MENU++++++++++++++++++\n")
+			escreva("\nDeseja escolher outro numero para a tabuada?")
+			escreva("\nDigite S para sim OU digite N para não: ")
+			leia(continua)
+			escreva("++++++++++++++++++++++++++++++++++\n")
+      }
+
+      // 02 - Escreva um algoritmo, que leia 2 números inteiros via teclado, onde o primeiro número deve ser
+    // menor do que o segundo número. Caso contrário, deve ser exibida uma mensagem na tela informando que o 
+    //intervalo é inválido e sair do programa. Dentro do intervalo informado intervalo, mostre na tela todes os números que são múltiplos de 3 e 5. Veja os exemplos abaixo:
+    
+    real primeiro, ultimo
+
+		para(inteiro contador =1; contador <2; contador ++)
+		{
+			escreva("\nDigite o primeiro número do intervalo: ")
+			leia(primeiro)
+			escreva("Digite o último número do intervalo: ")
+      leia(ultimo)
+
+      se(primeiro>ultimo){
+        escreva("Intervalo inválido!")
+        retorne
+      }
+
+      se(primeiro % 5 == 0 e primeiro % 3 == 0){
+        escreva(primeiro, " é múltiplo de 5 e 3\n")
+        senao{
+          escreva("Intervalo Inválido\n")
+        }
+
+       se(ultimo % 5 == 0 e primeiro % 3 == 0){
+        escreva(ultimo, " é múltiplo de 5 e 3")
+        senao{
+          escreva("Intervalo Inválido")
+        } 
+
+        // 03 - Escreva um algoritmo, que leia 10 números inteiros via teclado e mostre na 
+    //tela quantos números são pares e quantos número são ímpares. Veja o exemplo abaixo:
+
+    real numero, somapar = 0, somaimpar = 0
+		
+		para(inteiro contador=1; contador<=10; contador++)
+		{
+			
+			escreva("\nDigite o ", contador, "º número: ")
+      leia(numero)
+      se(numero%2==1){
+        somaimpar = somaimpar + numero
+      }
+      se(numero%2==0){
+        somapar = somapar + numero
+			
+		}
+    
+    escreva("Total de pares é ", somapar)
+    escreva("\nTotal de ímpares é ", somaimpar)
+    
+    }
+    
+  }
+}
